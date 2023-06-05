@@ -15,3 +15,13 @@ function getAddress() {
 function printName() {
     console.log("void not returned");
 }
+// default parameters
+const fullName = (firstName, lastName = "default") => {
+    return firstName + " " + lastName;
+};
+console.log(fullName("win"));
+// optional parameters
+const getUmur = (name, age) => {
+    return "name" + name + "  " + "umur" + age;
+};
+console.log(getUmur("winarno", 12));

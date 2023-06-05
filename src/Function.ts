@@ -21,3 +21,19 @@ function printName (): void {
     console.log("void not returned");
     
 }
+
+// default parameters
+const fullName =(firstName : string, lastName : string= "default") : string =>{
+    return firstName + " " + lastName
+}
+
+console.log(fullName("win"));
+
+// optional parameters
+
+const getUmur = (name : string,age?: number): string =>{
+    return "name" + name + "  " +"umur" +age
+}
+
+console.log(getUmur("winarno" ,12));
+
