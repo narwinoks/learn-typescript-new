@@ -8,7 +8,7 @@
   "scripts": {
     "tsc": "rm -fr build/ && tsc",
     "ts": "rm -fr build/ && tsc -w",
-    "dev": "nodemon ./build/index.js"
+    "dev": "nodemon ./build/typeDasar.js"
   },
   "dependencies": {
     "nodemon": "^2.0.22",
