@@ -1,2 +1,2 @@
 "use strict";
-console.log("hello world is not function");
+console.log("hello world is not");
