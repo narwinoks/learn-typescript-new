@@ -1,0 +1,17 @@
+{
+  "name": "learn-typescript",
+  "version": "1.0.0",
+  "description": "learn-typescript",
+  "main": "app.ts",
+  "author": "wins",
+  "license": "MIT",
+  "scripts": {
+    "tsc": "rm -fr build/ && tsc",
+    "ts": "rm -fr build/ && tsc -w",
+    "dev": "nodemon ./build/index.js"
+  },
+  "dependencies": {
+    "nodemon": "^2.0.22",
+    "typescript": "^5.0.4"
+  }
+}
