@@ -21,3 +21,7 @@ hero = 20;
 hero = {};
 hero = [];
 console.log("tipe data any = " + hero);
+// union type data
+let phone;
+phone = 6281477084167;
+phone = "081477084167";
