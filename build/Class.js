@@ -2,10 +2,10 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.User = void 0;
 class User {
-    constructor(name, email) {
-        this.email = email;
+    constructor(name, age) {
+        this.age = age;
         this.name = name;
-        this.email = email;
+        this.age = age;
     }
     setName(value) {
         this.name = value;
@@ -17,10 +17,16 @@ class User {
 exports.User = User;
 // Inheritance
 class Admin extends User {
-    constructor() {
-        super(...arguments);
+    constructor(phone, name, age) {
+        super(name, age);
         this.read = true;
         this.write = true;
+        // setter and getter
+        this._email = "";
+        this.phone = phone;
+    }
+    static getNameRole() {
+        return "hero";
     }
     getRoles() {
         return {
@@ -28,8 +34,24 @@ class Admin extends User {
             white: this.write
         };
     }
+    set email(value) {
+        if (value.length < 5) {
+            this._email = "email not specified";
+        }
+        else {
+            this._email = value;
+        }
+    }
+    get email() {
+        return this._email;
+    }
 }
-let admin = new Admin("john", "john@gmail.com");
-// class /
-// let user = new User("john" ,"john@gmail.com");
+Admin.getRoleName = "admin";
+let admin = Admin.getNameRole();
 console.log(admin);
+// let admin = new Admin("081477084167" ,"john",20);
+// admin.email="win@example.com";
+// console.log(admin.email);
+// // class /
+// // let user = new User("john" ,"john@gmail.com");
+// console.log(admin);
